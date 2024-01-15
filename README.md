@@ -36,7 +36,7 @@ The data used in this project consists of dialogues from the "Friends" TV series
 The project successfully identifies key parameters and techniques for character vectorization, showing how different preprocessing and feature extraction methods impact the distinction between character vectors.
 
 ## License
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [Apache 2.0 License](LICENSE.md).
 
 ## Acknowledgments
 - Thanks to the creators and writers of "Friends" for inspiring this analysis.
