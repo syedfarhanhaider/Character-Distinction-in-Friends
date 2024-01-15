@@ -1,94 +1,43 @@
-# Friends Script Character Distinction Project
+# Character Vectorization and Information Retrieval in Friends Script Data
 
-## Project Overview:
+## Description
+This project focuses on developing vector representations for dialogue lines spoken by characters in the "Friends" TV series. The aim is to create distinct vector representations for each character and evaluate their effectiveness using simple information retrieval classification methods. This approach is designed to optimize vector representations to ensure maximal distinction between different characters' dialogues.
 
-This project focuses on creating a vector representation of character lines in the Friends script data to maximize the distinction between character vectors. The primary goal is to optimize the vector representation to enhance character-based analysis and understanding. The project includes data loading, preprocessing, feature extraction, hyperparameter tuning, information retrieval evaluation, and visualization components.
+## Objectives
+- To create distinct vector representations for each character in the Friends script data.
+- To optimize these representations for maximal distinction between characters.
+- To evaluate the effectiveness of these representations using information retrieval methods.
 
-## Project Components:
+## Installation
+To set up this project, follow these steps:
 
-### 1. Data Loading and Preprocessing:
+bash
 
-•	**Files:** training.csv, val.csv, test.csv
+git clone https://github.com/syedfarhanhaider/friends-character-vectorization.git
 
-•	**Functions:** create_character_document_from_dataframe
+cd friends-character-vectorization
 
-> Generates character documents from the dataframe.
+pip install -r requirements.txt
 
-> Displaying the number of words for each character in the training set.
 
-### 2. Preprocessing:
+## Usage
+The project includes scripts and Jupyter notebooks that demonstrate the process of vectorization and information retrieval:
 
-•	**Function:** pre_process
+1. **Data Preprocessing**: Scripts for preprocessing the script data.
+2. **Feature Extraction**: Techniques applied to extract features from the text data.
+3. **Model Training and Evaluation**: Methods for training and evaluating the information retrieval models.
 
-> Handles lowercasing, tokenization, stop word removal, punctuation removal, stemming, number removal, and special character removal.
+Navigate to the `notebooks/` directory to view the Jupyter notebooks with detailed analysis.
 
-> Test the pre_process function on a sample text.
+## Data
+The data used in this project consists of dialogues from the "Friends" TV series. Due to copyright considerations, the data is not included in this repository. You can obtain similar datasets from publicly available sources.
 
-### 3. Feature Extraction:
+## Results
+The project successfully identifies key parameters and techniques for character vectorization, showing how different preprocessing and feature extraction methods impact the distinction between character vectors.
 
-•	**Functions:** to_feature_vector_dictionary
+## License
+This project is licensed under the [MIT License](LICENSE.md).
 
-> Converts pre-processed tokens and extra features to a feature vector dictionary.
-
-> Utilizes TF-IDF transformation for feature extraction.
-
-### 4. Information Retrieval Evaluation:
-
-•	**Function:** compute_IR_evaluation_scores
-
-> Computes an IR-based evaluation on training and test data.
-
-> Evaluates mean rank, mean cosine similarity, and accuracy.
-
-> Generates a dataframe with similarity measures.
-
-### 5. Hyperparameter Tuning:
-
-•	Defines parameter grids for preprocessing and feature extraction.
-
-•	Iterates over parameter combinations to find the optimal set of parameters that minimizes the mean rank.
-
-### 6. Visualization:
-
-•	**Functions:** plot_heat_map_similarity
-
-> Plots a heatmap to visualize the similarity matrix between documents as vectors.
-
-> Visualizations offer insights into linguistic patterns and relationships among characters.
-
-### 7. Closest and Farthest Characters:
-
-•	Analyzes and presents the closest and farthest characters based on similarity measures.
-
-## Results:
-
-•	Provides a comprehensive analysis of the impact of preprocessing and feature extraction parameters on the mean rank in an IR evaluation.
-
-•	Identifies the optimal set of parameters for maximizing the distinction between character vectors.
-
-•	Visualizations, including heatmaps and character differentiations, offer insights into linguistic patterns and relationships.
-
-## Recommendations:
-
-•	The optimized vector representation and identified parameters can be used for character-based analysis in Friends script data.
-
-•	Further exploration can be conducted using advanced natural language processing techniques and deep learning models.
-
-## How to Run:
-
-1.	Install necessary libraries using !pip install -r requirements.txt.
-
-2.	Run the project script: python friends_script_analysis.py.
-
-## Acknowledgments:
-
-•	The project uses the Friends script data for analysis.
-
-•	Acknowledgment to the creators of NLTK and scikit-learn libraries for their contributions.
-
-## Contributors:
-
-•	Syed Farhan Haider
-
-Feel free to contribute to the project or provide feedback!
-
+## Acknowledgments
+- Thanks to the creators and writers of "Friends" for inspiring this analysis.
+- Special thanks to all contributors and maintainers of the open-source libraries used in this project.
